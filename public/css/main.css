@@ -8,12 +8,16 @@ p {
 h4{
   text-transform: uppercase;
 }
-
+.list{
+  line-height: 200%;
+}
+.list .floor{
+  line-height: 300%;
+}
 .no-padding > [class*="col-"] {
   padding-left:0 !important;
   padding-right: 0 !important;
 }
-
 
 /**********************************
 #BUTTONS
@@ -53,7 +57,10 @@ h4{
 #SECTION 0
 **********************************/
 #section0{
-  background-color: #333;
+  background-image: url("../image/header-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
   color: #fff;
 }
 #section0 span{
@@ -76,23 +83,23 @@ h4{
   text-decoration: none;
 }
 .bg{
-background-color: gray;
+background-color: rgba(77, 77, 77, 0.8);
 }
 #section0 .top{
-  margin-top:15px;
+  margin-top: 2%;
 }
 #section0 a.apply{padding: 1px 15px 1px 15px;}
 #section0 a.info{padding: 1px 10px 1px 10px;}
 
 .box{
-  background-color: gray;
-  opacity: 0.8;
+  background-color: rgba(77, 77, 77, 0.8);
+
   width: 50%;
   margin:10% 0 10% 25%;
 }
 .innerbox{
   border-style: solid;
-  border-color: white;
+  border-color: rgba(128, 128, 128, 0.5);
   width: 98%;
   margin:1% 10% 1% 1%;
   padding: 0 10px 20px 10px;
@@ -100,7 +107,7 @@ background-color: gray;
 }
 .inner{
   border-style: solid;
-  border-color: white;
+  border-color: rgba(128, 128, 128, 0.5);
   width: 100%;
   height: 100%;
   margin:0% 1% 1% 0%;
@@ -181,6 +188,7 @@ vertical-align: 0.5em
   #section0 #schedule{
     bottom: -10px;
   }
+
 }
 @media (min-width:921px){
   #section0 #schedule{
@@ -194,33 +202,52 @@ vertical-align: 0.5em
       bottom:-18px;
     }
   }
+  @media (max-width:1030){
+    #section0 .top .phone{
+      width: 100%;
+
+    }
+  }
+  @media(min-width:1650px){
+    #section0 .top{
+    margin-top: 1.5%;
+    }
+  }
 /**********************************
 #SECTION 1
 **********************************/
 h2{
   text-transform: uppercase;
 }
+#section1{
+  background-image: url("/image/brick-background.jpg");
+  background-repeat: no-repeat;
+  background-size:100%;
 
+}
 #section1 .flipcard{
   width: 100%;
   position:relative;
   margin-bottom: 25px;
 }
 
-.req{
-  padding: 4px;
-  font-size: 0.7em;
-  position: relative;
-
-}
 
 #section1 img{
   width:100%;
 }
+#section1 .cafe{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/internet-cafe.jpg");
+  background-size: cover;
+}
+#section1 .fitness{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/fitness-facilities.jpg");
+  background-size: cover;
+}
 #section1 .flipcard .flipcard-back.backtext{
 padding: 5px;
 border-style: none;
-background-color: gray;
+background-color: #333;
+/*background-color:rgba(128,128,128,0.8);*/
 color: white;
 text-align: center;
 }
@@ -233,6 +260,18 @@ text-align: center;
   }
   #section1 .flipcard a {
     display:none;
+  }
+  #section1 .cafe{
+    background-color: #333;
+    background-image: none;
+  }
+  #section1 .fitness{
+    background-color: #333;
+    background-image: none;
+  }
+  #section1 .mobileview{
+    width: 100%;
+    height: 350px;
   }
 }
 @media (min-width:768px){
@@ -282,14 +321,19 @@ text-align: center;
   }
   .flipcard-md{
     transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
+    /*transition: all 1s ease-in-out;*/
   }
   .flipcard-sm{
     transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
+    /*transition: all 1s ease-in-out;*/
   }
 
+  .req{
+    padding: 4px;
+    font-size: 0.7em;
+    position: relative;
 
+  }
 }
 /**********************************
 #SECTION 2
@@ -299,11 +343,32 @@ text-align: center;
 #SECTION 3
 **********************************/
 #section3 {
-  background:#333;color:#fff
+  background-image: url("../image/section-background.jpg");
+  background-size:200% 100%;
+  background-attachment: fixed;
+  background-position:center;
+  background-repeat: no-repeat;
+  color:#fff
+}
+#section3 #tabs li {
+  width: 20%;
 }
 #section3 p {
   color:#fff
+}
+#section3 #myCarousel{
+  margin-top: 6px;
+}
+#section3 .slide{
+  padding:0 4px 0 4px;
+}
 
+#section3 .tabcontainer{
+  border-style: solid;
+  border-color: #333;
+  padding: 15px;
+  border-width: thin;
+  background-color: rgba(77, 77, 77, 0.8);
 }
 @media (max-width : 767px)  {
 	#section3 .tab-content>.tab-pane {
@@ -331,7 +396,7 @@ text-align: center;
     #section3 .h4:after{
       content:"";
       display: block;
-      width: 20%;
+      width: 10%;
       height: 5px;
       background: #802b2a;
       bottom:10px;
@@ -358,11 +423,37 @@ text-align: center;
       width:100%;
     }
 }
-
-
+@media(min-width:1200px) {
+  #section3 #tabs li {
+    width: 15.8%;
+  }
+}
+@media (max-width:1199px){
+  #section3 #tabs li {
+    width: 15.5%;
+  }
+  #section3 #tabs li a:after {
+    width: 100%;
+  }
+}
+@media(max-width : 992px){
+  #section3 #tabs li {
+    width: 15%;
+  }
+  #section3 a{
+    font-size: 0.7em;
+  }
+  #section3 .list{font-size: 1.1rem;}
+}
 /**********************************
 #SECTION 4
 **********************************/
+#section4{
+  background-image: url("/image/brick-background.jpg");
+  background-repeat: no-repeat;
+  background-size:100% ;
+
+}
 #section4 h3 {
   font-family:"Cabin";
   font-weight:700;
@@ -388,6 +479,9 @@ text-align: center;
   #section4 .stuff{
     margin: 20px;
   }
+  #section4 .no-padding{
+    text-align: center;
+  }
 }
 @media (min-width : 992px)  {
 	#section4 .stuff {
@@ -401,8 +495,9 @@ text-align: center;
 }
 @media(max-width : 992px) {
   #section4 .stuff{
-    padding: 0 5px;
+    padding: 0 6px;
   }
+  #section4 img{height: 100%;}
   #section p{
     font-size: 0.8rem;
   }
@@ -417,20 +512,32 @@ text-align: center;
 }
 @media (min-width : 1200px)  {
 	#section4 .stuff {
-    height:433px
+    height:433px;
+    padding: -10px;
   }
 	#section4 p {
     font-size:1.7rem;
   }
+  #section4 img{
+    width: 100%;
+  }
 }
-
-
-
+@media (max-width : 316px){
+  #section4 .mr{
+    padding: 2px 23px;
+}
+}
 
 /**********************************
 #FOOTER
 **********************************/
-#footer {color:#fff;background:#333;font-size:1.3em;font-family:"Cabin";font-weight:700}
+#footer {color:#fff;
+  background-image: url("../image/footer-background.jpg");
+  background-size: 200% 100%;
+  background-position: center;
+  font-size:1.3em;
+  font-family:"Cabin";
+  font-weight:700}
 #footer img {margin-bottom:15px;}
 #footer a {color:#fff;}
 #footer ul {margin:15px 0px 0;padding:0px;}
