@@ -1,24 +1,41 @@
 .section{
   padding:50px 0
 }
-p {
+p{
   font-family:Lato;
   color:#6a6569
+}
+#section0 a{
+  font-family: "Montserrat";
+  color:white;
 }
 h4{
   text-transform: uppercase;
 }
-.list{
+.list i{
   line-height: 200%;
 }
-.list .floor{
+.list{
   line-height: 300%;
+}
+.list .floor{
+  line-height: 350%;
 }
 .no-padding > [class*="col-"] {
   padding-left:0 !important;
   padding-right: 0 !important;
 }
-
+.border{
+  border-style: solid;
+  border-color: rgba(128, 128, 128, 0.5);
+  width: 98%;
+  margin:1% 5% 1% 1%;
+  padding: 5px 10px 5px 10px;
+  border-width: thin;
+}
+.tabcontainer{
+  border-style: none;
+}
 /**********************************
 #BUTTONS
 **********************************/
@@ -205,7 +222,6 @@ vertical-align: 0.5em
   @media (max-width:1030){
     #section0 .top .phone{
       width: 100%;
-
     }
   }
   @media(min-width:1650px){
@@ -247,7 +263,6 @@ h2{
 padding: 5px;
 border-style: none;
 background-color: #333;
-/*background-color:rgba(128,128,128,0.8);*/
 color: white;
 text-align: center;
 }
@@ -258,9 +273,11 @@ text-align: center;
   #section1 .flipcard i {
     display:none;
   }
-  #section1 .flipcard a {
+  /*de*/
+  #section1 .flipcard button {
     display:none;
   }
+  /*de*/
   #section1 .cafe{
     background-color: #333;
     background-image: none;
@@ -274,29 +291,7 @@ text-align: center;
     height: 350px;
   }
 }
-@media (min-width:768px){
-#section1 .flipcard .flipcard-back{
-  display: block;
-  position:absolute;
-  width:100%;
-  height: 100%;
-  top:0;
-  left:0;
-}
-
-#section1 .flipcard .flipcard-front a{
-  display:block;
-  position: absolute;
-  bottom: 0;
-  right:0;
-}
-.affordable{
-  border-right-style: solid;
-  border-right-color: white;
-  border-right-width:thin;
-}
-}
-@media (min-width : 768px){
+@media (min-width:767px){
   .flipcard-front{
     backface-visibility: hidden;
     transform:rotateY(0deg);
@@ -310,29 +305,83 @@ text-align: center;
     transform:rotateX(180deg);
 
   }
-  /*up/down text rotate*/
+#section1 .flipcard .flipcard-back{
+  display: block;
+  position:absolute;
+  width:100%;
+  height: 100%;
+  top:0;
+  left:0;
+}
+
+/*de*/
+#section1 .flipcard .flipcard-front button{
+  display:block;
+  position: absolute;
+  bottom: 0;
+  right:0;
+}
+/*de*/
+.affordable{
+  border-right-style: solid;
+  border-right-color: white;
+  border-right-width:thin;
+}
+
+/*de*/
+.flipcontainer {
+	perspective: 1000;
+}
+.flipcontainer.hover .flipcard {
+	transform: rotateY(180deg);
+}
+.flipcard {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.flipcard-front, .flipcard-back {
+	backface-visibility: hidden;
+}
+.flipcard-front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+.flipcard-back {
+	transform: rotateY(180deg);
+}
+.flipcontainer.hover .flipcard-sm {
+		transform: rotateY(180deg);
+	}
+  .flipcontainer.hover .flipcard-md {
+  		transform: rotateX(180deg);
+  	}
+/*de*/
+}
+.req{
+  padding: 6px 10px;
+  font-size: 0.8em;
+  position: relative;
+
+}
+
+@media(min-width:921px){
   .flipcard-sm:hover{
     transform:rotateY(180deg);
     perspective:700;
   }
+
   .flipcard-md:hover{
     transform:rotateX(180deg);
     perspective:700;
   }
   .flipcard-md{
     transform-style: preserve-3d;
-    /*transition: all 1s ease-in-out;*/
+    transition: all 1s ease-in-out;
   }
   .flipcard-sm{
     transform-style: preserve-3d;
-    /*transition: all 1s ease-in-out;*/
-  }
-
-  .req{
-    padding: 4px;
-    font-size: 0.7em;
-    position: relative;
-
+    transition: all 1s ease-in-out;
   }
 }
 /**********************************
@@ -364,9 +413,7 @@ text-align: center;
 }
 
 #section3 .tabcontainer{
-  border-style: solid;
-  border-color: #333;
-  padding: 15px;
+  padding: 0.5px 0 0.5px 0;
   border-width: thin;
   background-color: rgba(77, 77, 77, 0.8);
 }
@@ -443,7 +490,16 @@ text-align: center;
   #section3 a{
     font-size: 0.7em;
   }
-  #section3 .list{font-size: 1.1rem;}
+  #section3 .list{
+    font-size: 1.3rem;
+    padding: 0;
+  }
+
+}
+#section3 #floorplans a{
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
 }
 /**********************************
 #SECTION 4
